@@ -1,1 +1,1 @@
-# PickIt-Local-E-commerce
+# PickIt: Local-E-commerce
