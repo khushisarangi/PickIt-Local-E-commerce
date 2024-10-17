@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
+/* Styling for navigation bar */
+nav {
+  background-color: green;
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border-right: 1px solid gray;
+}
+
+nav a:last-child {
+  border-right: none;
+}
+
+/* Styling for transaction page */
+.header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+#myInput, #timeInput {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.addBtn {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #f9f9f9;
+}
+
+li.checked {
+  background-color: #888;
+  color: white;
+  text-decoration: line-through;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Styling for bargain request section */
+.bargain-request {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.accept-btn, .reject-btn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.accept-btn {
+  background-color: green;
+  color: white;
+}
+
+.reject-btn {
+  background-color: red;
+  color: white;
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="">Contact</a>
+</nav>
+
+<div id="myDIV" class="header">
+  <h2>Transaction Page</h2>
+  <input type="text" id="myInput" placeholder="Item...">
+  <input type="date" id="dateInput">
+  <input type="number" id="priceInput" placeholder="Price...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL">
+  <li>Potato - 2024-04-07 - 50</li>
+  <li>Tomato - 2024-04-07 - 30</li>
+  <li>Eggs - 2024-04-07 - 10</li>
+  <li>Lemon - 2024-04-07 - 5</li>
+</ul>
+
+<!-- Bargain request section -->
+<div class="bargain-request">
+  <h2>Bargain request from User "ABC"</h2>
+  <button class="accept-btn" onclick="acceptBargainRequest()">Accept Request</button>
+  <button class="reject-btn" onclick="rejectBargainRequest()">Reject Request</button>
+</div>
+
+<!-- Popup for bargain request accepted -->
+<div id="acceptPopup" style="display: none;">
+  <h3>Request for bargain accepted</h3>
+</div>
+
+<!-- Popup for bargain request rejected -->
+<div id="rejectPopup" style="display: none;">
+  <h3>Request for bargain rejected</h3>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+// JavaScript functionality remains the same as provided in the previous version
+
+// Function to handle accepting bargain request
+function acceptBargainRequest() {
+  // Show popup for bargain request accepted
+  document.getElementById("acceptPopup").style.display = "block";
+  // Disable accept and reject buttons and change their color to grey
+  document.querySelector(".accept-btn").disabled = true;
+  document.querySelector(".reject-btn").disabled = true;
+  document.querySelector(".accept-btn").style.backgroundColor = "grey";
+  document.querySelector(".reject-btn").style.backgroundColor = "grey";
+}
+
+// Function to handle rejecting bargain request
+function rejectBargainRequest() {
+  // Show popup for bargain request rejected
+  document.getElementById("rejectPopup").style.display = "block";
+  // Disable accept and reject buttons and change their color to grey
+  document.querySelector(".accept-btn").disabled = true;
+  document.querySelector(".reject-btn").disabled = true;
+  document.querySelector(".accept-btn").style.backgroundColor = "grey";
+  document.querySelector(".reject-btn").style.backgroundColor = "grey";
+}
+</script>
+
+</body>
+</html>

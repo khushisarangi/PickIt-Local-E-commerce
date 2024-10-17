@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>TailTalesReunion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <section class="h-100 bg-dark">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col">
+                    <div class="card card-registration my-4">
+                        <div class="row g-0">
+                            <div class="col-xl-6 d-none d-xl-block">
+                                <img src="amma.jfif"
+                                    alt="Sample photo" class="img-fluid"
+                                    style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card-body p-md-5 text-black">
+                                    <h3 class="mb-5 text-uppercase">venders Log in</h3>
+
+                                    <!-- Login Form -->
+                                    <form id="loginForm" class="login-form">
+                                        <h4>Login</h4>
+                                        <div class="form-outline mb-4">
+                                            <input type="email" id="loginEmail" class="form-control form-control-lg" required>
+                                            <label class="form-label" for="loginEmail">Email ID</label>
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="password" id="loginPassword" class="form-control form-control-lg" required>
+                                            <label class="form-label" for="loginPassword">Password</label>
+                                        </div>
+                                        <a href="vendor.html" target="_blank">
+                                            
+                                            log in
+                                        </a>
+
+                                    <!-- Signup Form -->
+                                  
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Handle login form submission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Get login credentials
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            // Perform login authentication (you'll need to implement this)
+            // Example:
+            // authenticateUser(email, password);
+        });
+
+        // Handle signup form submission
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Get signup credentials
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+            // Perform signup (you'll need to implement this)
+            // Example:
+            // signupUser(firstName, lastName, email, password);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <link rel="stylesheet" href="vendor-details.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="ourlogo.png" alt="Logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">List</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Signup</a></li>
+      </ul>
+    </nav>
+    <div class="vendor-details">
+      <h1>Vendor Name</h1>
+      <h2>Category: Category Name</h2>
+      <p>Address: Vendor Address</p>
+      <input type="date" name="date_picker" value="2020-01-29" required><button>preorder</button>
+      <h3>Available Fruits:</h3>
+      <ul class="item-list">
+        <div class="product">
+          <img src="papaya.jfif" alt="Papaya" />
+          <h2 id="item1">Papaya</h2>
+          <p>Description of the product goes here.</p>
+          <p>Price: 50 INR</p>
+          <button class="buy-button" onclick="addToCartt()">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="mago.jfif" alt="Mango" />
+          <h2 id="item2">Mango</h2>
+          <p>Description of the product goes here.</p>
+          <p>Price: 150 INR</p>
+          <button class="buy-button" onclick="addToCart2()">Add to Cart</button>
+        </div>
+        <div class="product">
+          <img src="apple.jfif" alt="Apple" />
+          <h2 id="item3">Apple</h2>
+          <p>Description of the product goes here.</p>
+          <p>Price: 70 INR</p>
+          <button class="buy-button" onclick="addToCart3()">Add to Cart</button>
+        </div>
+      </ul>
+    </div>
+    <div class="cart">
+      <h3>My Grocery List</h3>
+      <img src="cart.jfif" alt="Cart" />
+      <ul id="cart-items">
+        <!-- Cart items will be added here dynamically -->
+      </ul>
+      <button class="buy-button"><a href="checkout.html" >BUY NOW</a></button>
+      <button class="buy-button" onclick="bargin()">BARGAIN</button>
+    </div>
+    <script src="buy.js" charset="UTF-8"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

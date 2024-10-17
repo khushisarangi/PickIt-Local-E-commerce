@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Vendor App</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<style>
+  .send-bargain-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+</style>
+
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="ourlogo.png" alt="Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">List</a></li>
+      <li><a href="login.html">Vendor</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+  <section class="banner">
+      <h1 class="banner-text">Close to <span class="red-text">Home,</span><br>Your <span class="green-text">Grocery needs</span><br>Never alone!</h1>
+  </section>
+  
+  
+  
+
+<div class="categories-container">
+  <div class="category fruits" >
+    <h2>Fruits</h2>
+    <div class="range-buttons">
+      <button class="range-btn" onclick="getCategoryVendors('Fruits', 5)">Under 5km</button>
+      <button class="range-btn" onclick="getCategoryVendors('Fruits', 10)">Under 10km</button>
+      <button class="range-btn" onclick="getCategoryVendors('Fruits', 20)">Under 20km</button>
+    </div>
+  </div>
+  <div class="category snacks">
+    <h2>Snacks</h2>
+    <div class="range-buttons">
+      <button class="range-btn" onclick="getCategoryVendors('Snacks', 5)">Under 5km</button>
+      <button class="range-btn" onclick="getCategoryVendors('Snacks', 10)">Under 10km</button>
+      <button class="range-btn" onclick="getCategoryVendors('Snacks', 20)">Under 20km</button>
+    </div>
+  </div>
+  <div class="category veggies">
+    <h2>Veggies</h2>
+    <div class="range-buttons">
+      <button class="range-btn" onclick="getCategoryVendors('Veggies', 5)">Under 5km</button>
+      <button class="range-btn" onclick="getCategoryVendors('Veggies', 10)">Under 10km</button>
+      <button class="range-btn" onclick="getCategoryVendors('Veggies', 20)">Under 20km</button>
+    </div>
+  </div>
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+ 
+  <div id="map"></div>
+
+  <button class="send-bargain-btn" onclick="sendBargainRequest()">Send Bargain Request</button>
+
+  <div class="benefits-carousel">
+      <div class="benefits-slides">
+          <div class="benefits-slide">Supporting local vendors promotes economic growth</div>
+          <div class="benefits-slide">Fresh and high-quality products directly from local</div>
+      </div>
+  </div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
